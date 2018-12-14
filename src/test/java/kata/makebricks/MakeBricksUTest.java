@@ -23,6 +23,13 @@ class MakeBricksUTest {
     }
 
     Boolean makeBricks(int small, int big, double goal) {
-        return null;
+        // If the goal is greater than the number of bricks provided
+        if (goal > (small + goal * 5)) return false;
+
+        // If there are not enough small bricks to reach the goal
+        if (goal % 5 > small) return false;
+
+        // A row of bricks is made!
+        return true;
     }
 }
